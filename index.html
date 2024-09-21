@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Abastecimento de Veículo</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Registrar Abastecimento</h2>
+    <form>
+      <div class="input-group">
+        <label for="veiculo">Veículo</label>
+        <input placeholder="Digite o nome do veículo" type="text" id="veiculo" required />
+      </div>
+
+      <div class="input-group">
+        <label for="combustivel">Tipo de Combustível</label>
+        <select id="combustivel">
+          <option value="gasolina">Gasolina</option>
+          <option value="etanol">Álcool/Etanol</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="litros">Quantidade de Litros</label>
+        <input placeholder="Digite a quantidade de litros abastecidos" type="text" id="litros" required />
+      </div>
+
+      <div class="input-group">
+        <label for="km">Kilômetros Rodados</label>
+        <input placeholder="Digite a distância percorrida em KM" type="text" id="km" required />
+      </div>
+
+      <div class="input-group">
+        <label for="valor">Valor do Abastecimento</label>
+        <input placeholder="Digite o valor abastecido" type="text" id="valor" required />
+      </div>
+
+      <div class="input-group">
+        <label for="data">Data do Abastecimento</label>
+        <input type="text" id="data" placeholder="Selecione uma data" />
+      </div>
+
+      <div class="input-group">
+        <button type="button" onclick="botaoDados()">Salvar</button>
+      </div>
+
+      <div class="input-group">
+        <button type="button" class="button-ver-registros"><a href="registros.html">Ver registros</a></button>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="app.js"></script>
+  <script>
+    flatpickr("#data", {
+      dateFormat: "d-m-y",
+      theme: "dark",
+    });
+  </script>
+</body>
+
+</html>

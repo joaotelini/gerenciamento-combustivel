@@ -1,0 +1,124 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Fundo escuro */
+  color: #e0e0e0; /* Texto claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #1e1e1e; /* Cor do container */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #e0e0e0; /* Linha clara abaixo do título */
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+  color: #bbb; /* Labels em cinza claro */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #444; /* Borda escura */
+  border-radius: 5px;
+  background-color: #2a2a2a; /* Fundo dos inputs */
+  color: #fff;
+  transition: border-color 0.3s;
+}
+
+input::placeholder {
+  color: #aaa; /* Placeholder em cinza claro */
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #e0e0e0; /* Borda clara no foco */
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; /* Botão em azul vibrante */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Azul mais escuro no hover */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5); /* Sombra ao passar o mouse */
+}
+
+button:active {
+  background-color: #004085; /* Cor mais escura ao clicar */
+}
+
+/* Estilo específico para o botão "Ver registros" */
+.button-ver-registros {
+  background-color: #7f218b; /* Azul claro */
+  margin-top: 10px; /* Espaçamento superior */
+}
+
+.button-ver-registros:hover {
+  background-color: #9513a7; /* Azul mais escuro no hover */
+  box-shadow: 0 4px 12px rgba(255, 0, 242, 0.5)
+}
+
+.button-ver-registros:active {
+  background-color: #7f218b; /* Cor mais escura ao clicar */
+}
+
+
+@media (max-width: 400px) {
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
