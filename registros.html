@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Registros de Abastecimento</title>
+  <link rel="stylesheet" href="registros.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      Menu
+    </div>
+    <ul>
+      <li><a href="index.html">Registrar Abastecimento</a></li>
+      <li><a href="registros.html">Ver Registros</a></li>
+      <li><a href="#">Configurações</a></li>
+      <li><a href="#">Ajuda</a></li>
+    </ul>
+  </div>
+
+  <!-- Ícone do Menu Hamburguer para mobile -->
+  <div class="menu-icon">&#9776;</div>
+
+  <!-- Conteúdo principal -->
+  <div class="content">
+    <h1>Registros de Abastecimento</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Veículo</th>
+          <th>Combustível</th>
+          <th>Litros</th>
+          <th>KMs Rodados</th>
+          <th>Valor</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Carro A</td>
+          <td>Gasolina</td>
+          <td>40L</td>
+          <td>200 Km</td>
+          <td>R$ 200,00</td>
+          <td>15/09/2024</td>
+        </tr>
+        <!-- Adicione mais registros conforme necessário -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const sidebar = document.querySelector('.sidebar');
+
+    // Adiciona um evento de clique ao ícone do menu
+    menuIcon.addEventListener('click', function () {
+      // Alterna a classe 'active' na sidebar
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
