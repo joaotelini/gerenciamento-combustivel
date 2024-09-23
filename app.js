@@ -12,7 +12,8 @@ const abastecimento = {
   kmRodado: [],
   data: [],
   combustivel: [],
-  media: []
+  media: [],
+  precoCombustivel: []
 }
 
 function calcKML() {
@@ -38,15 +39,11 @@ function limparInput() {
   kmRodado.value = ""
   precoAbastecimento.value = ""
   data.value = ""
-  combustivel.value = ""
-}
-
-function salvarDados() {
-  botaoSalvar()
 }
 
 function botaoSalvar() {
   let media = calcKML()
+  let preco = precoAbastecimento.value/litrosAbastecimento.value
 
   if (media !== null) {
     abastecimento.nomeVeiculo.push(nomeVeiculo.value)
@@ -56,6 +53,7 @@ function botaoSalvar() {
     abastecimento.combustivel.push(combustivel.value)
     abastecimento.data.push(data.value)
     abastecimento.media.push(media)
+    abastecimento.precoCombustivel.push(parseFloat(preco))
 
     console.log(abastecimento)
 
