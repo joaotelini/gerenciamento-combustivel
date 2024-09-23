@@ -33,6 +33,7 @@ body {
 
 .sidebar-header {
   font-size: 1.5em;
+  font-weight: bold;
   margin-bottom: 20px;
   color: #b13cff;
   border-bottom: 1px solid #444;
@@ -83,7 +84,6 @@ body {
 }
 
 h1 {
-  color: #b13cff;
   text-align: center;
   margin-bottom: 30px;
 }
