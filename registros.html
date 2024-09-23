@@ -8,71 +8,47 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <title>Registros de Abastecimento</title>
-  <link rel="stylesheet" href="registros.css" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="registros.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div class="sidebar-header">
-      <p>Menu</p>
-    </div>
-    <ul>
-      <li><a href="index.html">Registrar Abastecimento</a></li>
-      <li><a href="registros.html">Ver Registros</a></li>
-      <li><a href="#">Configurações</a></li>
-      <li><a href="#">Ajuda</a></li>
-    </ul>
-  </div>
-
-  <!-- Ícone do Menu Hamburguer para mobile -->
-  <div class="menu-icon">&#9776;</div>
-
   <!-- Conteúdo principal -->
   <div class="content">
     <h1>Registros de Abastecimento</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Veículo</th>
-          <th>Combustível</th>
-          <th>Litros</th>
-          <th>KMs Rodados</th>
-          <th>Média KM/L</th>
-          <th>Valor</th>
-          <th>Data</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Carro A</td>
-          <td>Gasolina</td>
-          <td>40L</td>
-          <td>200 Km</td>
-          <td>12,5KM/L</td>
-          <td>R$ 200,00</td>
-          <td>15/09/2024</td>
-        </tr>
-        <!-- Adicione mais registros conforme necessário -->
-      </tbody>
-    </table>
+    <div class="cards-container">
+      <div class="card">
+        <h2>Veículo: Carro A</h2>
+        <p><strong>Combustível:</strong> Gasolina</p>
+        <p><strong>Litros:</strong> 40L</p>
+        <p><strong>KMs Rodados:</strong> 200 Km</p>
+        <p><strong>Média KM/L:</strong> 12,5 KM/L</p>
+        <p><strong>Valor:</strong> R$ 200,00</p>
+        <p><strong>Data:</strong> 15/09/2024</p>
+      </div>
+      <!-- Adicione mais cartões conforme necessário -->
+      <div class="card">
+        <h2>Veículo: Carro B</h2>
+        <p><strong>Combustível:</strong> Etanol</p>
+        <p><strong>Litros:</strong> 30L</p>
+        <p><strong>KMs Rodados:</strong> 150 Km</p>
+        <p><strong>Média KM/L:</strong> 10 KM/L</p>
+        <p><strong>Valor:</strong> R$ 120,00</p>
+        <p><strong>Data:</strong> 20/09/2024</p>
+      </div>
+      <div class="card">
+        <h2>Veículo: Carro B</h2>
+        <p><strong>Combustível:</strong> Etanol</p>
+        <p><strong>Litros:</strong> 30L</p>
+        <p><strong>KMs Rodados:</strong> 150 Km</p>
+        <p><strong>Média KM/L:</strong> 10 KM/L</p>
+        <p><strong>Valor:</strong> R$ 120,00</p>
+        <p><strong>Data:</strong> 20/09/2024</p>
+      </div>
+    </div>
   </div>
-
-  <script>
-    const menuIcon = document.querySelector('.menu-icon');
-    const sidebar = document.querySelector('.sidebar');
-
-    // Adiciona um evento de clique ao ícone do menu
-    menuIcon.addEventListener('click', function () {
-      // Alterna a classe 'active' na sidebar
-      sidebar.classList.toggle('active');
-    });
-  </script>
 
   <script src="app.js"></script>
 </body>

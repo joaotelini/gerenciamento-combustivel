@@ -1,90 +1,21 @@
-/* Reset básico */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #121212;
-  /* Fundo escuro */
   color: #e0e0e0;
-  /* Texto claro */
-  display: flex;
-  height: 100vh;
   overflow-x: hidden;
-  /* Evitar barra de rolagem horizontal */
 }
 
-/* Sidebar */
-.sidebar {
-  width: 220px;
-  background-color: #222;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: 1000;
-  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.8);
-  transition: transform 0.3s ease;
-}
-
-.sidebar-header {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #b13cff;
-  border-bottom: 1px solid #444;
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-.sidebar-header p {
-  margin-top: 10px;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar ul li {
-  margin-bottom: 40px;
-}
-
-.sidebar ul li a {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-size: 1.2em;
-  display: block;
-  transition: color 0.3s;
-}
-
-.sidebar ul li a:hover {
-  color: #b13cff;
-  /* Cor de hover */
-}
-
-/* Ícone do Menu Hamburguer */
-.menu-icon {
-  font-size: 2em;
-  color: #fff;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  cursor: pointer;
-  z-index: 2000;
-  display: none;
-  /* Esconde em telas maiores */
-}
-
-/* Estilos para o conteúdo principal */
 .content {
-  margin-left: 220px;
-  /* Largura da sidebar */
-  padding: 40px;
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 h1 {
@@ -92,65 +23,37 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Estilos da Tabela */
-table {
-  width: 100%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  text-align: left;
-  border: 1px solid #444;
+/* Estilos dos cartões */
+.card {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
 }
 
-th,
-td {
-  padding: 12px 15px;
-  border: 1px solid #444;
+.card:hover {
+  transform: scale(1.05);
 }
 
-th {
-  background-color: #333;
-  color: #e0e0e0;
-  font-size: 1.1em;
-  font-weight: normal;
+.card h2 {
+  margin-bottom: 10px;
 }
 
-td {
-  background-color: #2a2a2a;
-  color: #e0e0e0;
-}
-
-tr:hover td {
-  background-color: #3a3a3a;
-  /* Cor de hover */
+.card p {
+  margin: 5px 0;
 }
 
 /* Responsividade */
-@media (max-width: 1070px) {
-  .menu-icon {
-    display: block;
-    /* Mostra o menu hamburguer em telas menores */
-  }
-
-  .sidebar {
-    transform: translateX(-100%);
-  }
-
-  .sidebar.active {
-    transform: translateX(0);
-  }
-
-  .content {
-    margin-left: 0;
-    padding: 20px;
-  }
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media (max-width: 850px) {
-  table {
-    font-size: 11px;
-  }
-
-  h1 {
-    font-size: medium;
+  .card {
+    width: 90%;
   }
 }
