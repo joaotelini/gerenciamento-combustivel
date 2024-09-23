@@ -41,6 +41,10 @@ body {
   text-align: center;
 }
 
+.sidebar-header p {
+  margin-top: 10px;
+}
+
 .sidebar ul {
   list-style: none;
 }
@@ -121,7 +125,7 @@ tr:hover td {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1070px) {
   .menu-icon {
     display: block;
     /* Mostra o menu hamburguer em telas menores */
