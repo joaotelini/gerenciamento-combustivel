@@ -111,7 +111,7 @@ th {
   background-color: #333;
   color: #e0e0e0;
   font-size: 1.1em;
-  text-transform: uppercase;
+  font-weight: normal;
 }
 
 td {
@@ -142,5 +142,15 @@ tr:hover td {
   .content {
     margin-left: 0;
     padding: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  table {
+    font-size: 11px;
+  }
+
+  h1 {
+    font-size: medium;
   }
 }
